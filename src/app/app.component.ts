@@ -5,6 +5,7 @@ import { filter } from 'rxjs/operators';
 import { Title } from '@angular/platform-browser';
 import { AppModuleModule } from "../app-module.module";
 import { MatIcon } from '@angular/material/icon';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -14,14 +15,13 @@ import { MatIcon } from '@angular/material/icon';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  title = 'FoodCart';
   currentRoute: string = '';
   showWelcome: boolean = true;
   isMVerton:any=true;
+  openedNav:boolean=false;
   constructor(private router: Router, private titleservice:Title) { this.titleservice.setTitle("Balkrishna") }
 
   ngOnInit() {
-    // Listen to route changes
     this.isMVerton=true;
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
@@ -35,6 +35,7 @@ export class AppComponent implements OnInit {
     return this.currentRoute === route;
   }
   scrollToSection(sectionId:any): void {
+    this.openDrawer();
   const el = document.getElementById(sectionId);
   if (el) {
     el.scrollIntoView({ behavior: 'smooth' });
@@ -43,11 +44,15 @@ export class AppComponent implements OnInit {
 changeMVerton():void{
   if(this.isMVerton==true){
     this.isMVerton=false;
-    this.scrollToSection('Education')
+    this.openDrawer();
   }else{
     this.isMVerton=true;
-  this.scrollToSection('Home')
+    this.openDrawer();
   }  
+}
+
+openDrawer(){
+  this.openedNav=!this.openedNav;
 }
 
 }

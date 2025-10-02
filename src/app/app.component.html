@@ -1,187 +1,218 @@
-<header class="flex flex-row justify-between items-center ml-50 mr-50 fixed w-full top-0 sm:w-full text-gray-300">
-    <div class="flex flex-col m-2 items-center justify-start">
-        <mat-icon (click)="changeMVerton()"> {{ isMVerton ? 'bolt' : 'rocket_launch' }} </mat-icon>
-    </div>
-    <div class="flex w-1/2  items-center m-2 justify-end font-light ">
-        <div class="w-1/5 cursor-pointer" (click)="scrollToSection('Project')">Project</div>
-        <div class="w-1/5 cursor-pointer" (click)="scrollToSection('Skills')">Skills</div>
-        <div class="w-1/5 cursor-pointer" (click)="scrollToSection('Experience')">Experience</div>
-    </div>
-</header>
+<mat-sidenav-container>
+    <mat-sidenav class="bg-black border-2 border-blue-200" [(opened)]="openedNav" mode="push" position="start">
+        <div id="Contacts" class="justify-start items-start">
+            <div class="mr-5 ml-2">
+                <div class="mt-5">
+                    <p class="text-lg  font-semibold">Contacts</p>
+                    <div class="flex w-full flex-row mb-4 justify-between">
+                        <div class="w-1/5 text-sm text-gray-500">Linked In
+                        </div>
+                        <div class="flex flex-col w-3/5 justify-start">
+                            <a href="https://linkedin.com/in/Balkrishna-singh">Linked IN <mat-icon
+                                    class="text-xs">open_in_new</mat-icon></a>
+                        </div>
+                    </div>
+                    <div class="flex w-full flex-row mb-4 justify-between">
+                        <div class="w-1/5 text-sm text-gray-500">Github (professional)
+                        </div>
+                        <div class="flex flex-col w-3/5 justify-start">
+                            <a href="https://github.com/Balkrishna-1663">Github professional
+                                <mat-icon class="text-xs">open_in_new</mat-icon></a>
+                        </div>
+                    </div>
+                    <div class="flex w-full flex-row mb-4 justify-between">
+                        <div class="w-1/5 text-sm text-gray-500">Github (personal)
+                        </div>
+                        <div class="flex flex-col w-3/5 justify-start">
+                            <a href="https://github.com/ProjectsByBalkrishna">Github personal
+                                <mat-icon class="text-xs">open_in_new</mat-icon></a>
+                        </div>
+                    </div>
+                    <div class="flex w-full justify-between flex-row mb-4">
+                        <div class="w-1/5 text-sm text-gray-500"> Download Resume
+                        </div>
+                        <div class="flex flex-col w-3/5 justify-start">
+                            <a download="assets/pfs.gif" href="assets/pfs.gif">Resume
+                                <mat-icon class="text-xs">open_in_new</mat-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="bg-black">
 
-<body id="Home" class="h-screen justify-center items-center">
-    <main class="ml-80 mr-80 mt-32 ">
-        <div class="TopLine w-full flex  flex-row items-center">
-            <div class="w-24 h-24 rounded-full overflow-hidden border-spacing-1 flex-shrink-0 ">
-                <img loading="lazy" class="object-cover w-full h-full" width="96" height="96" decoding="async" data-nimg="1" style="color:transparent" src="assets/pfs.gif" alt="PFIMG" /> </div>
-            <div class="flex flex-col ml-7">
-                <h1 class="text-3xl font-extrabold text-gray-300">Balkrishna Singh</h1>
-                <p class="text-xl text-gray-400">Software Developer</p>
-                <p class="text-sm text-gray-500">
-                    <a href="mailto: BalkrishnaSingh.Tech@gmail.com">Balkrishna&#64;gmail.com</a>
-                </p>
+        <header class="flex flex-row justify-between items-center ml-50 mr-50 fixed w-full top-0 sm:w-full text-gray-300">
+            <div class="flex flex-col m-2 items-center justify-start">
+                <mat-icon (click)="changeMVerton()"> {{ isMVerton ? 'bolt' : 'rocket_launch' }} </mat-icon>
             </div>
-        </div>
-        <div class="space-y-4 mt-10">
-            <p class="text-lg font-semibold">About</p>
-            <p class="text-sm leading-relaxed text-gray-400">Hi, I'm Balkrishna — a full-stack developer who enjoys solving complex problems (especially those late-night debugging sessions). I work primarily with Angular, FastAPI, C#, and .NET.</p>
-        </div>
-    </main>
-</body>
-<div id="Project" class="h-screen project justify-center items-center">
-    <div class="mt-20 mr-80 ml-80">
-        <p class="text-lg font-semibold">Projects</p>
-        <div class="flex w-full flex-row">
-            <div class="w-1/4 text-sm text-gray-500">2024 - present</div>
-            <div class="flex flex-col">
-                <a class="flex mb-1 text-green-200" href="https://github.com/Balkrishna-1663/Khana-e-Khazana">Khana-e-Khazana <sup class="text-xl"> ↗ </sup > </a>
-                <p class="text-gray-300">A Food delivery application for late night craving, made by/for lazy people. <br> A Full-Stack Web Application using <i class="text-blue-200">Angular + .Net,</i> If you are interested you are more than Welcome</p>
-                <div class="flex flex-wrap gap-1 text-xs text-gray-400"> <span>Angular</span>•<span>.Net</span>•<span>Tailwind</span>•<span>SSMS</span></div>
+            <div class="flex w-1/2  items-center m-2 justify-end font-light ">
+                <div class="w-1/5 cursor-pointer" (click)="scrollToSection('Project')">Project</div>
+                <div class="w-1/5 cursor-pointer" (click)="scrollToSection('Skills')">Skills</div>
+                <div class="w-1/5 cursor-pointer" (click)="scrollToSection('Experience')">Experience</div>
             </div>
-        </div>
-        <div class="flex w-full flex-row mt-10">
-            <div class="w-1/4 text-sm text-gray-500">2024</div>
-            <div class="flex flex-col">
-                <a class="flex mb-1 text-violet-300" href="https://github.com/ProjectsByBalkrishna/ChessCom">Chess Dashboard<sup class="text-xl"> ↗ </sup > </a>
-                <p class="text-gray-300">A Chess Dasboard to display statistics and rating of <a class="text-indigo-300 font-extralight" href="https://www.Chess.Com/"> Chess.Com</a> players <br> A Full-Stack Web Application using <i class="text-orange-200">.Net MVC, Razor, SSMS, API(chess.com)</i>                    </p>
-                <div class="flex flex-wrap gap-1 text-xs text-gray-400"> <span>Razor</span>•<span>.Net</span>•<span>SSMS</span></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="Experience" class="h-screen project justify-center items-center">
-    <div class="mt-20 mr-80 ml-80">
-        <div class="mt-10">
-            <p class="text-lg  font-semibold">Work experience</p>
-            <div class="flex w-full flex-row">
-                <div class="w-1/4 text-sm text-gray-500">2022 - Present</div>
-                <div class="flex flex-col">
-                    <a class="flex mb-1 text-red-200" href="https://au.linkedin.com/company/ozdocs-international">Software Developer • Ozdocs International <sup class="text-xl"> ↗ </sup > </a>
-                    <p class="flex text-gray-300">Full stack developer with strong backend focus, delivering high-performance APIs, optimized databases using knowledge of .Net, Angular and SQL.</p>
-                    <div class="flex flex-wrap gap-1 text-xs text-gray-400"> <span>Angular</span>•<span>.Net</span>•<span>SQL</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        </header>
 
-<div id="Skills" class="h-screen project justify-start items-start">
-    <div class="mt-20 mr-80 ml-80">
-        <div class="mt-10">
-            <p class="text-lg  font-semibold">Skills</p>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">.Net</div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <p> Proficient in building RESTful services and enterprise-grade backends using ASP.NET Core. Focused on clean architecture, dependency injection, and secure, scalable codebases.</p>
-                </div>
-            </div>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">Angular</div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <p> Expert in developing dynamic, component-based SPAs using Angular. Strong in RxJS, Angular CLI, lazy loading, and state management to ensure responsive, high-performing user interfaces.</p>
-                </div>
-            </div>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">DBMS</div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <p> Skilled in designing normalized schemas, writing optimized SQL queries, and managing relational databases like SQL Server or PostgreSQL. Experienced with data integrity, indexing, and performance tuning</p>
-                </div>
-            </div>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">Tailwind</div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <p>Capable of crafting clean, responsive, and accessible UI components with Tailwind. Speedy prototyping and pixel-perfect implementation of design systems</p>
-                </div>
-            </div>
-            <div class="flex w-full flex-row">
-                <div class="w-1/4 text-sm text-gray-500">API Development & <br>Integration</div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <p> Strong understanding of REST principles and JSON-based communication. Skilled in building secure, versioned APIs and integrating third-party services.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="Education" class="h-screen project justify-start items-start">
-    <div class="mt-20 mr-80 ml-80">
-        <div class="mt-10">
-            <p class="text-lg  font-semibold">Education</p>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">Masters <br> 2025-2027 </div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <p> Masters In Computer Application</p>
-                    <p class="text-gray-500"> I have pursuing my masters degree from Indira Gandhi National Open
-                        University, Delhi. </p>
-                </div>
-            </div>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">Bachelors <br> 2021-2024 </div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <p> Bachelors In Computer Application</p>
-                    <p class="text-gray-500"> I have done my graduation from LN College of management, Mumbai. </p>
-                </div>
-            </div>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">XII<sup>th</sup><br>2019-2021</div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <p> Commerce </p>
-                    <p class="text-gray-500"> I have Passed my High-School from Mother Mary's Junior College. Where I
-                        passed with 1
-                        <sup>st</sup> Grade.
-                    </p>
-                </div>
-            </div>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">X<sup>th</sup><br>2019</div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <p> Metrics </p>
-                    <p class="text-gray-500"> I have done my Schooling from Adarsh Education Society. Where I passed
-                        with 1
-                        <sup>st</sup> Grade.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        <body id="Home" class="h-screen justify-center items-center">
+            <main class="ml-80 mr-80 mt-32 ">
+                <div class="TopLine w-full flex  flex-row items-center">
+                    <div class="w-24 h-24 rounded-full overflow-hidden border-spacing-1 flex-shrink-0 ">
+                        <img loading="lazy" class="object-cover w-full h-full" width="96" height="96" decoding="async" data-nimg="1"
+                            style="color:transparent" src="assets/pfs.gif" alt="PFIMG" />
+                        </div>
+                        <div class="flex flex-col ml-7">
+                            <h1 class="text-3xl font-extrabold text-gray-300">Balkrishna Singh</h1>
+                            <p class="text-xl text-gray-400">Software Developer</p>
+                            <p class="text-sm text-gray-500">
+                                <a href="mailto: BalkrishnaSingh.Tech@gmail.com">Balkrishna&#64;gmail.com</a>
+                            </p>
+                        </div>
+                        </div>
+                        <div class="space-y-4 mt-10">
+                            <p class="text-lg font-semibold">About</p>
+                            <p class="text-sm leading-relaxed text-gray-400">Hi, I'm Balkrishna — a full-stack developer who enjoys solving
+                                complex problems (especially those late-night debugging sessions). I work primarily with Angular, FastAPI, C#,
+                                and .NET.</p>
+                        </div>
+                        </main>
+                        </body>
+                        <div id="Project" class="h-screen project justify-center items-center">
+                            <div class="mt-20 mr-80 ml-80">
+                                <p class="text-lg font-semibold">Projects</p>
+                                <div class="flex w-full flex-row">
+                                    <div class="w-1/4 text-sm text-gray-500">2024 - present</div>
+                                    <div class="flex flex-col">
+                        <a class="flex mb-1 text-green-200" href="https://github.com/Balkrishna-1663/Khana-e-Khazana">Khana-e-Khazana <sup
+                                class="text-xl"> ↗
+                            </sup> </a>
+                        <p class="text-gray-300">A Food delivery application for late night craving, made by/for lazy people.
+                            <br> A Full-Stack Web Application using <i class="text-blue-200">Angular + .Net,</i> If you are interested you are
+                            more than Welcome
+                        </p>
+                        <div class="flex flex-wrap gap-1 text-xs text-gray-400">
+                            <span>Angular</span>•<span>.Net</span>•<span>Tailwind</span>•<span>SSMS</span>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="flex w-full flex-row mt-10">
+                            <div class="w-1/4 text-sm text-gray-500">2024</div>
+                            <div class="flex flex-col">
+                        <a class="flex mb-1 text-violet-300" href="https://github.com/ProjectsByBalkrishna/ChessCom">Chess
+                            Dashboard<sup class="text-xl"> ↗ </sup> </a>
+                        <p class="text-gray-300">A Chess Dasboard to display statistics and rating of <a class="text-indigo-300 font-extralight"
+                                href="https://www.Chess.Com/"> Chess.Com</a> players <br> A Full-Stack Web Application using <i
+                                class="text-orange-200">.Net MVC, Razor,
+                                SSMS, API(chess.com)</i> </p>
+                        <div class="flex flex-wrap gap-1 text-xs text-gray-400">
+                            <span>Razor</span>•<span>.Net</span>•<span>SSMS</span>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div id="Experience" class="h-screen project justify-center items-center">
+                            <div class="mt-20 mr-80 ml-80">
+                                <div class="mt-10">
+                                    <p class="text-lg  font-semibold">Work experience</p>
+                                    <div class="flex w-full flex-row">
+                                        <div class="w-1/4 text-sm text-gray-500">2022 - Present</div>
+                                        <div class="flex flex-col">
+                            <a class="flex mb-1 text-red-200" href="https://au.linkedin.com/company/ozdocs-international">Software Developer •
+                                Ozdocs
+                                International <sup class="text-xl"> ↗ </sup> </a>
+                            <p class="flex text-gray-300">Full stack developer with strong backend focus, delivering high-performance APIs,
+                                optimized databases using knowledge of .Net, Angular and SQL.</p>
+                            <div class="flex flex-wrap gap-1 text-xs text-gray-400">
+                                <span>Angular</span>•<span>.Net</span>•<span>SQL</span>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
 
-<div id="Contacts" class="h-screen project justify-start items-start">
-    <div class="mt-20 mr-80 ml-80">
-        <div class="mt-10">
-            <p class="text-lg  font-semibold">Contacts</p>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">Linked In
-
-                </div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <a href="https://linkedin.com/in/Balkrishna-singh">Linked IN <mat-icon
-                            class="text-xs">open_in_new</mat-icon></a>
-                </div>
-            </div>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">Github (professional)
-                </div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <a href="https://github.com/Balkrishna-1663">Github professional
-                        <mat-icon class="text-xs">open_in_new</mat-icon></a>
-                </div>
-            </div>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500">Github (personal)
-                </div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <a href="https://github.com/ProjectsByBalkrishna">Github personal
-                        <mat-icon class="text-xs">open_in_new</mat-icon></a>
-                </div>
-            </div>
-            <div class="flex w-full flex-row mb-4">
-                <div class="w-1/4 text-sm text-gray-500"> Download Resume
-                </div>
-                <div class="flex flex-col w-3/4 justify-start">
-                    <a download="assets/pfs.gif" href="assets/pfs.gif">Resume
-                        <mat-icon class="text-xs">open_in_new</mat-icon></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        <div id="Skills" class="h-screen project justify-start items-start">
+            <div class="mt-20 mr-80 ml-80">
+                <div class="mt-10">
+                    <p class="text-lg  font-semibold">Skills</p>
+                    <div class="flex w-full flex-row mb-4">
+                        <div class="w-1/4 text-sm text-gray-500">.Net</div>
+                        <div class="flex flex-col w-3/4 justify-start">
+                            <p> Proficient in building RESTful services and enterprise-grade backends using ASP.NET Core. Focused on clean
+                                architecture, dependency injection, and secure, scalable codebases.
+                            </p>
+                            </div>
+                            </div>
+                            <div class="flex w-full flex-row mb-4">
+                                <div class="w-1/4 text-sm text-gray-500">Angular</div>
+                                <div class="flex flex-col w-3/4 justify-start">
+                                    <p> Expert in developing dynamic, component-based SPAs using Angular. Strong in RxJS, Angular CLI, lazy loading,
+                                        and state management to ensure responsive, high-performing user interfaces.</p>
+                                </div>
+                            </div>
+                            <div class="flex w-full flex-row mb-4">
+                                <div class="w-1/4 text-sm text-gray-500">DBMS</div>
+                                <div class="flex flex-col w-3/4 justify-start">
+                                    <p> Skilled in designing normalized schemas, writing optimized SQL queries, and managing relational databases
+                                        like SQL Server or PostgreSQL. Experienced with data integrity, indexing, and performance tuning</p>
+                                </div>
+                            </div>
+                            <div class="flex w-full flex-row mb-4">
+                                <div class="w-1/4 text-sm text-gray-500">Tailwind</div>
+                                <div class="flex flex-col w-3/4 justify-start">
+                                    <p>Capable of crafting clean, responsive, and accessible UI components with Tailwind. Speedy prototyping and
+                                        pixel-perfect implementation of design systems</p>
+                                </div>
+                            </div>
+                            <div class="flex w-full flex-row">
+                                <div class="w-1/4 text-sm text-gray-500">API Development & <br>Integration</div>
+                                <div class="flex flex-col w-3/4 justify-start">
+                                    <p> Strong understanding of REST principles and JSON-based communication. Skilled in building secure, versioned
+                                        APIs and integrating third-party services.</p>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            <div id="Education" class="h-screen project justify-start items-start">
+                                <div class="mt-20 mr-80 ml-80">
+                                    <div class="mt-10">
+                                        <p class="text-lg  font-semibold">Education</p>
+                                        <div class="flex w-full flex-row mb-4">
+                                            <div class="w-1/4 text-sm text-gray-500">Masters <br> 2025-2027 </div>
+                                            <div class="flex flex-col w-3/4 justify-start">
+                                                <p> Masters In Computer Application</p>
+                            <p class="text-gray-500"> I have pursuing my masters degree from Indira Gandhi National Open University, Delhi. </p>
+                            </div>
+                            </div>
+                            <div class="flex w-full flex-row mb-4">
+                                <div class="w-1/4 text-sm text-gray-500">Bachelors <br> 2021-2024 </div>
+                                <div class="flex flex-col w-3/4 justify-start">
+                                    <p> Bachelors In Computer Application</p>
+                            <p class="text-gray-500"> I have done my graduation from LN College of management, Mumbai.
+                            </p>
+                            </div>
+                            </div>
+                            <div class="flex w-full flex-row mb-4">
+                                <div class="w-1/4 text-sm text-gray-500">XII<sup>th</sup><br>2019-2021</div>
+                                <div class="flex flex-col w-3/4 justify-start">
+                                    <p> Commerce </p>
+                            <p class="text-gray-500"> I have Passed my High-School from Mother Mary's Junior College. Where I passed with 1
+                                <sup>st</sup> Grade.
+                            </p>
+                            </div>
+                            </div>
+                            <div class="flex w-full flex-row mb-4">
+                                <div class="w-1/4 text-sm text-gray-500">X<sup>th</sup><br>2019</div>
+                                <div class="flex flex-col w-3/4 justify-start">
+                                    <p> Metrics </p>
+                            <p class="text-gray-500"> I have done my Schooling from Adarsh Education Society. Where I passed with 1
+                                <sup>st</sup> Grade.
+                            </p>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+    </mat-sidenav-content>
+    </mat-sidenav-container>
