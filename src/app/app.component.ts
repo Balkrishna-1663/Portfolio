@@ -8,6 +8,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
+  
   selector: 'app-root',
   standalone: true,
   imports: [RouterModule, CommonModule, AppModuleModule,MatIcon],
@@ -35,7 +36,7 @@ export class AppComponent implements OnInit {
     return this.currentRoute === route;
   }
   scrollToSection(sectionId:any): void {
-    this.openDrawer();
+
   const el = document.getElementById(sectionId);
   if (el) {
     el.scrollIntoView({ behavior: 'smooth' });
