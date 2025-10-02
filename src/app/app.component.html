@@ -1,8 +1,8 @@
-<header class="flex flex-row justify-between items-center ml-50 mr-50 fixed top-0 w-full text-gray-300">
-    <div class="flex m-2 items-center justify-end">
-        <p class="font-serif" (click)="scrollToSection('Home')"> Portfolio</p>
+<header class="flex flex-row justify-between items-center ml-50 mr-50 fixed w-full top-0 sm:w-full text-gray-300">
+    <div class="flex flex-col m-2 items-center justify-start">
+        <mat-icon (click)="changeMVerton()"> {{ isMVerton ? 'bolt' : 'rocket_launch' }} </mat-icon>
     </div>
-    <div class="flex w-1/2 items-center m-2 justify-end font-light">
+    <div class="flex w-1/2  items-center m-2 justify-end font-light ">
         <div class="w-1/5 cursor-pointer" (click)="scrollToSection('Project')">Project</div>
         <div class="w-1/5 cursor-pointer" (click)="scrollToSection('Skills')">Skills</div>
         <div class="w-1/5 cursor-pointer" (click)="scrollToSection('Experience')">Experience</div>
@@ -11,13 +11,15 @@
 
 <body id="Home" class="h-screen justify-center items-center">
     <main class="ml-80 mr-80 mt-32 ">
-        <div class="TopLine w-full flex flex-row items-center">
+        <div class="TopLine w-full flex  flex-row items-center">
             <div class="w-24 h-24 rounded-full overflow-hidden border-spacing-1 flex-shrink-0 ">
                 <img loading="lazy" class="object-cover w-full h-full" width="96" height="96" decoding="async" data-nimg="1" style="color:transparent" src="assets/pfs.gif" alt="PFIMG" /> </div>
             <div class="flex flex-col ml-7">
                 <h1 class="text-3xl font-extrabold text-gray-300">Balkrishna Singh</h1>
                 <p class="text-xl text-gray-400">Software Developer</p>
-                <p class="text-sm text-gray-500"> BalkrishnaSingh.TECH&#64;gmail.com</p>
+                <p class="text-sm text-gray-500">
+                    <a href="mailto: BalkrishnaSingh.Tech@gmail.com">Balkrishna&#64;gmail.com</a>
+                </p>
             </div>
         </div>
         <div class="space-y-4 mt-10">
@@ -27,7 +29,7 @@
     </main>
 </body>
 <div id="Project" class="h-screen project justify-center items-center">
-    <div class="mt-10 mr-80 ml-80">
+    <div class="mt-20 mr-80 ml-80">
         <p class="text-lg font-semibold">Projects</p>
         <div class="flex w-full flex-row">
             <div class="w-1/4 text-sm text-gray-500">2024 - present</div>
@@ -48,7 +50,7 @@
     </div>
 </div>
 <div id="Experience" class="h-screen project justify-center items-center">
-    <div class="mt-10 mr-80 ml-80">
+    <div class="mt-20 mr-80 ml-80">
         <div class="mt-10">
             <p class="text-lg  font-semibold">Work experience</p>
             <div class="flex w-full flex-row">
@@ -64,7 +66,7 @@
 </div>
 
 <div id="Skills" class="h-screen project justify-start items-start">
-    <div class="mt-10 mr-80 ml-80">
+    <div class="mt-20 mr-80 ml-80">
         <div class="mt-10">
             <p class="text-lg  font-semibold">Skills</p>
             <div class="flex w-full flex-row mb-4">
@@ -95,6 +97,89 @@
                 <div class="w-1/4 text-sm text-gray-500">API Development & <br>Integration</div>
                 <div class="flex flex-col w-3/4 justify-start">
                     <p> Strong understanding of REST principles and JSON-based communication. Skilled in building secure, versioned APIs and integrating third-party services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="Education" class="h-screen project justify-start items-start">
+    <div class="mt-20 mr-80 ml-80">
+        <div class="mt-10">
+            <p class="text-lg  font-semibold">Education</p>
+            <div class="flex w-full flex-row mb-4">
+                <div class="w-1/4 text-sm text-gray-500">Masters <br> 2025-2027 </div>
+                <div class="flex flex-col w-3/4 justify-start">
+                    <p> Masters In Computer Application</p>
+                    <p class="text-gray-500"> I have pursuing my masters degree from Indira Gandhi National Open
+                        University, Delhi. </p>
+                </div>
+            </div>
+            <div class="flex w-full flex-row mb-4">
+                <div class="w-1/4 text-sm text-gray-500">Bachelors <br> 2021-2024 </div>
+                <div class="flex flex-col w-3/4 justify-start">
+                    <p> Bachelors In Computer Application</p>
+                    <p class="text-gray-500"> I have done my graduation from LN College of management, Mumbai. </p>
+                </div>
+            </div>
+            <div class="flex w-full flex-row mb-4">
+                <div class="w-1/4 text-sm text-gray-500">XII<sup>th</sup><br>2019-2021</div>
+                <div class="flex flex-col w-3/4 justify-start">
+                    <p> Commerce </p>
+                    <p class="text-gray-500"> I have Passed my High-School from Mother Mary's Junior College. Where I
+                        passed with 1
+                        <sup>st</sup> Grade.
+                    </p>
+                </div>
+            </div>
+            <div class="flex w-full flex-row mb-4">
+                <div class="w-1/4 text-sm text-gray-500">X<sup>th</sup><br>2019</div>
+                <div class="flex flex-col w-3/4 justify-start">
+                    <p> Metrics </p>
+                    <p class="text-gray-500"> I have done my Schooling from Adarsh Education Society. Where I passed
+                        with 1
+                        <sup>st</sup> Grade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="Contacts" class="h-screen project justify-start items-start">
+    <div class="mt-20 mr-80 ml-80">
+        <div class="mt-10">
+            <p class="text-lg  font-semibold">Contacts</p>
+            <div class="flex w-full flex-row mb-4">
+                <div class="w-1/4 text-sm text-gray-500">Linked In
+
+                </div>
+                <div class="flex flex-col w-3/4 justify-start">
+                    <a href="https://linkedin.com/in/Balkrishna-singh">Linked IN <mat-icon
+                            class="text-xs">open_in_new</mat-icon></a>
+                </div>
+            </div>
+            <div class="flex w-full flex-row mb-4">
+                <div class="w-1/4 text-sm text-gray-500">Github (professional)
+                </div>
+                <div class="flex flex-col w-3/4 justify-start">
+                    <a href="https://github.com/Balkrishna-1663">Github professional
+                        <mat-icon class="text-xs">open_in_new</mat-icon></a>
+                </div>
+            </div>
+            <div class="flex w-full flex-row mb-4">
+                <div class="w-1/4 text-sm text-gray-500">Github (personal)
+                </div>
+                <div class="flex flex-col w-3/4 justify-start">
+                    <a href="https://github.com/ProjectsByBalkrishna">Github personal
+                        <mat-icon class="text-xs">open_in_new</mat-icon></a>
+                </div>
+            </div>
+            <div class="flex w-full flex-row mb-4">
+                <div class="w-1/4 text-sm text-gray-500"> Download Resume
+                </div>
+                <div class="flex flex-col w-3/4 justify-start">
+                    <a download="assets/pfs.gif" href="assets/pfs.gif">Resume
+                        <mat-icon class="text-xs">open_in_new</mat-icon></a>
                 </div>
             </div>
         </div>

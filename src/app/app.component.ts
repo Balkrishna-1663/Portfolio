@@ -3,11 +3,13 @@ import { RouterOutlet, RouterModule, Router, NavigationEnd } from '@angular/rout
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { Title } from '@angular/platform-browser';
+import { AppModuleModule } from "../app-module.module";
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, AppModuleModule,MatIcon],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -15,11 +17,12 @@ export class AppComponent implements OnInit {
   title = 'FoodCart';
   currentRoute: string = '';
   showWelcome: boolean = true;
-
-  constructor(private router: Router, private titleservice:Title) { this.titleservice.setTitle("Home") }
+  isMVerton:any=true;
+  constructor(private router: Router, private titleservice:Title) { this.titleservice.setTitle("Balkrishna") }
 
   ngOnInit() {
     // Listen to route changes
+    this.isMVerton=true;
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
@@ -37,4 +40,14 @@ export class AppComponent implements OnInit {
     el.scrollIntoView({ behavior: 'smooth' });
   }
 }
+changeMVerton():void{
+  if(this.isMVerton==true){
+    this.isMVerton=false;
+    this.scrollToSection('Education')
+  }else{
+    this.isMVerton=true;
+  this.scrollToSection('Home')
+  }  
+}
+
 }
